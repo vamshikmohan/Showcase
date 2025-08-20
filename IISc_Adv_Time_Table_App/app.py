@@ -30,7 +30,8 @@ st.title("IISc M.Tech Course Timetable Planner")
 # File Controls (Upload / Default)
 # =========================
 uploaded_file = st.file_uploader("📂 Upload your Excel file", type=["xlsx"])
-default_file = "IISc_Adv_Time_Table_App/Aug 2025 term courses.xlsx"
+default_file_folder = "IISc_Adv_Time_Table_App/"
+default_file = "Aug 2025 term courses.xlsx"
 use_default = st.button(f"Use Default File – {default_file}")
 
 # Load or switch dataset into session_state
@@ -38,7 +39,7 @@ if uploaded_file is not None:
     st.session_state.df = extract_table_excel(uploaded_file)
     st.session_state.data_source = "upload"
 elif use_default:
-    st.session_state.df = extract_table_excel(default_file)
+    st.session_state.df = extract_table_excel(default_file_folder+default_file)
     st.session_state.data_source = "default"
 
 df = st.session_state.df
