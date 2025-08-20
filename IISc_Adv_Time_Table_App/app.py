@@ -24,7 +24,7 @@ if "mandatory_courses" not in st.session_state:
 if "additional_courses" not in st.session_state:
     st.session_state.additional_courses = []
 
-st.title("IISc Course 1 Timetable Planner")
+st.title("IISc Course Timetable Planner")
 
 # =========================
 # File Controls (Upload / Default)
