@@ -30,7 +30,7 @@ st.title("IISc M.Tech Course Timetable Planner")
 # File Controls (Upload / Default)
 # =========================
 uploaded_file = st.file_uploader("📂 Upload your Excel file", type=["xlsx"])
-default_file = "Aug 2025 term courses.xlsx"
+default_file = "IISc_Adv_Time_Table_App/Aug 2025 term courses.xlsx"
 use_default = st.button(f"Use Default File – {default_file}")
 
 # Load or switch dataset into session_state
