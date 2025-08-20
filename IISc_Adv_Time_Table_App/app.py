@@ -184,7 +184,21 @@ st.download_button(
     mime="image/png",
 )
 
-selected_df = df[df["Selected"]]
+selected_df = df[df["Selected"]][[
+    "Sl No",
+    "Course Code",
+    "Course Name",
+    "Credit",
+    "Level",
+    "Department",
+    "Faculty",
+    "Approved Time Slot",
+    "Venue",
+    "Division",
+    "Academic Year",
+    "Academic Session"
+]]
+
 excel_buf = io.BytesIO()
 with pd.ExcelWriter(excel_buf, engine="openpyxl") as writer:
     selected_df.to_excel(writer, index=False, sheet_name="Timetable")
