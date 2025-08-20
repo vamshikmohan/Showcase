@@ -430,7 +430,7 @@ def plot_and_add_blocks_for_list(df):
 
     # Extend limits
     new_ymin = table_bottom - tolerance - box_height_data
-    ax.set_ylim(new_ymin, ymax - 0.6)
+    ax.set_ylim(new_ymin - 2, ymax - 0.6)
 
     return fig, ax
 
